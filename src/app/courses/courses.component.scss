@@ -1,0 +1,50 @@
+@import "../@tools/global";
+.course{
+    margin-top : 35px;
+
+    position : relative ;
+
+    .content-back{
+        background-color: blue;
+        img{
+            opacity:0.4;
+
+            width: 100vw;
+            height:450px;
+        }
+    }
+
+}
+
+.content-course{
+
+    position : absolute;
+    top : 15%;
+    left : 10%;
+    color : white;
+
+    margin-left: 10px;
+    .entete{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 35px;
+    }
+    .cardElement{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .card{
+            width: 320px;
+            margin: 10px;
+            img{
+                width:100%;
+                height:150px;
+            }
+            p{
+                padding :5px;
+                font-family : $font1;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import '../@tools/global';
+
+.container-fuild{
+    width: 80vw !important;
+    padding: 20px 100px;
+    
+    .container{
+        display : flex;
+        justify-content:space-between;
+        .content-logo{
+            padding-left:10%;
+            img{
+                width: 100px;
+                height: 80px;
+            }
+        }
+        .content-menu{
+            display: flex;
+            width: auto;
+            ul{
+                display: flex;
+                margin-right: 25px;
+                li{
+                    list-style: none;
+                    margin:0 10px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-family : $font2;
+                }
+            }
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+        }
+    }
+}
