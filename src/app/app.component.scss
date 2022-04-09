@@ -1,4 +1,15 @@
-.work{
+.work {
     width: 100vw;
     overflow-x: hidden;
+}
+
+
+
+@media screen and (max-width : 378px) {
+
+    .courses {
+        background-color: rgb(48, 75, 145);
+        height: 90vh;
+        padding-top: 25px;
+    }
 }
