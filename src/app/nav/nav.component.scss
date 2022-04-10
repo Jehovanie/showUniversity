@@ -1,40 +1,69 @@
 @import '../@tools/global';
 
-.container-fuild{
-    width: 80vw !important;
-    padding: 20px 100px;
-    
-    .container{
-        display : flex;
-        justify-content:space-between;
-        .content-logo{
-            padding-left:10%;
-            img{
+.container-fuild {
+    padding: 10px 50px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        position: relative;
+
+        .content-logo {
+            padding-left: 10%;
+
+            img {
                 width: 100px;
                 height: 80px;
             }
         }
-        .content-menu{
+
+        .menu-slide {
+            position: absolute;
+            right: 40px;
+            top: 15px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .show-menu {
+                display: none;
+            }
+
+            .hide-menu {
+                display: none;
+            }
+        }
+
+
+
+        .content-menu {
             display: flex;
             width: auto;
-            ul{
+
+            ul {
                 display: flex;
                 margin-right: 25px;
-                li{
+
+                li {
                     list-style: none;
-                    margin:0 10px;
+                    margin: 0 10px;
 
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     text-transform: uppercase;
-                    font-family : $font2;
+                    font-family: $font2;
                 }
             }
+
             span {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 img {
                     width: 30px;
                     height: 30px;
@@ -43,4 +72,75 @@
 
         }
     }
+}
+
+
+@media screen and (max-width : 378px) {
+
+    .container-fuild {
+        width: 80vw !important;
+        padding: 20px 100px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            position: relative;
+
+            .content-logo {
+                padding-left: 10%;
+
+                img {
+                    width: 100px;
+                    height: 80px;
+                }
+            }
+
+            .menu-slide {
+
+                .show-menu {
+                    display: block;
+                }
+
+            }
+
+
+
+            .content-menu {
+                display: none;
+                width: auto;
+
+                ul {
+                    display: block;
+                    margin-right: 25px;
+
+                    li {
+                        list-style: none;
+                        margin: 10px 10px;
+
+                        border-bottom: 2px solid black;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-transform: uppercase;
+                        font-family: $font2;
+                    }
+                }
+
+                span {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
