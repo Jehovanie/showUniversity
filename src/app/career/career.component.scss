@@ -1,0 +1,64 @@
+.container-career {
+    width: 100vw;
+    height: 50vh;
+
+    position: relative;
+
+    .content-image-bg {
+        background-color: blue;
+        width: 100vw;
+
+        height: 100%;
+
+        img {
+            width: 100vw;
+            height: 100%;
+            opacity: 0.6;
+        }
+    }
+
+    .content-text {
+        width: 50%;
+        margin: 0 auto;
+
+        padding: 45px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 20%;
+        left: 20%;
+
+        color: white;
+
+        h1 {
+            font-weight: bold;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .btn {
+            width: 150px;
+            height: 30px;
+
+            border-radius: 15px;
+            background-color: rgb(52, 63, 223);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 15px;
+
+            font-weight: bold;
+        }
+    }
+}
