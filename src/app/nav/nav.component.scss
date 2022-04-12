@@ -6,7 +6,6 @@
     .container {
         display: flex;
         justify-content: space-between;
-
         position: relative;
 
         .content-logo {
@@ -20,12 +19,13 @@
 
         .menu-slide {
             position: absolute;
-            right: 40px;
+            right: 20px;
             top: 15px;
 
             img {
                 width: 50px;
                 height: 50px;
+                cursor: pointer;
             }
 
             .show-menu {
@@ -75,16 +75,79 @@
 }
 
 
-@media screen and (max-width : 378px) {
+@media screen and (max-width : 667px) {
 
     .container-fuild {
         width: 80vw !important;
-        padding: 20px 100px;
+        padding: 20px 10px;
+
+        margin: 0 auto;
 
         .container {
             display: flex;
             justify-content: space-between;
 
+            position: relative;
+
+            .content-logo {
+                padding-left: 5%;
+
+                img {
+                    width: 100px;
+                    height: 80px;
+                }
+            }
+
+            .content-menu {
+                display: none;
+                width: auto;
+
+                position: absolute;
+                right: 0;
+                top: 60px;
+
+                z-index: 10;
+
+                ul {
+                    display: block;
+                    margin-right: 25px;
+
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 15px;
+
+                    li {
+                        list-style: none;
+                        margin: 10px 10px;
+
+                        border-bottom: 2px solid black;
+
+                        transition: 0.2s;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        li:hover {
+                            transform: scale(2);
+                        }
+                    }
+
+                }
+
+                span {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 667px) {
+    .container-fuild {
+
+        .container {
+            justify-content: space-between;
             position: relative;
 
             .content-logo {
@@ -97,28 +160,38 @@
             }
 
             .menu-slide {
+                position: absolute;
+                right: 20px;
+                top: 15px;
 
-                .show-menu {
-                    display: block;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
                 }
 
+                .show-menu {
+                    display: none !important;
+                }
+
+                .hide-menu {
+                    display: none;
+                }
             }
 
 
 
             .content-menu {
-                display: none;
+                display: flex;
                 width: auto;
 
                 ul {
-                    display: block;
+                    display: flex;
                     margin-right: 25px;
 
                     li {
                         list-style: none;
-                        margin: 10px 10px;
-
-                        border-bottom: 2px solid black;
+                        margin: 0 10px;
 
                         display: flex;
                         justify-content: center;
@@ -129,7 +202,14 @@
                 }
 
                 span {
-                    display: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
 
             }
@@ -137,8 +217,15 @@
     }
 }
 
+@media screen and (min-width : 992px) {}
+
+
+.show-or-hide {
+    display: block !important;
+}
+
 .show {
-    display: block;
+    display: block !important;
 }
 
 .hide {

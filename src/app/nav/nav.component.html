@@ -4,10 +4,15 @@
             <img src="../../assets/images/log.jpeg" alt="logo">
         </div>
         <div class="menu-slide">
-            <img class="show-menu" src="../../assets/images/m.png" alt="showMenu" (click)="showMenu()">
-            <img class="hide-menu" src="../../assets/images/x.png" alt="hideMenu">
+            <img [ngClass]="{'show-menu': true,
+                            'show-or-hide':!isShowMenu}" src="../../assets/images/m.png" alt="showMenu"
+                (click)="showMenu()">
+            <img [ngClass]="{'hide-menu': true,
+                            'show-or-hide':isShowMenu}" src="../../assets/images/x.png" alt="hideMenu"
+                (click)="showMenu()">
         </div>
-        <div class='content-menu'>
+        <div [ngClass]="{'content-menu':true,
+                         'show' : isShowMenu}">
             <ul>
                 <li>lorem</li>
                 <li>lorem</li>
